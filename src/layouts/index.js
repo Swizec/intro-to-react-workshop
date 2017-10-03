@@ -17,7 +17,7 @@ const Header = () => (
         padding: '1.45rem 1.0875rem',
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <h2 style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
@@ -26,9 +26,9 @@ const Header = () => (
                  textShadow: 'none'
                  }}
           >
-          Intro to React
+          Intro to React Workshop
         </Link>
-      </h1>
+      </h2>
     </div>
   </div>
 )
