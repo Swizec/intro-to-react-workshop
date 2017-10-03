@@ -30,5 +30,6 @@ module.exports = {
                     ]
                 }
             }
-  ]
+  ],
+  pathPrefix: `/intro-to-react-workshop`
 }
