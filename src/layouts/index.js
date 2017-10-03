@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
-import './index.css'
-
 const Header = () => (
   <div
     style={{
@@ -23,11 +21,12 @@ const Header = () => (
         <Link
           to="/"
           style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          Gatsby
+                 color: 'white',
+                 textDecoration: 'none',
+                 textShadow: 'none'
+                 }}
+          >
+          Intro to React
         </Link>
       </h1>
     </div>
@@ -37,10 +36,10 @@ const Header = () => (
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="Gatsby Default Starter"
+      title="Intro to React workshop by Swizec"
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description', content: 'Intro to Reacth workshop materials' },
+        { name: 'keywords', content: 'react, workshop' },
       ]}
     />
     <Header />
