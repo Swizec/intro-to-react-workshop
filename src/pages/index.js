@@ -49,7 +49,7 @@ const WhoSwiz = () => (
             <li>been coding for over 20 years</li>
             <li>published <a href="http://nightowlsbook.com/">Why Programmers Work at Night</a>, that was fun</li>
             <li>published <a href="https://www.packtpub.com/web-development/data-visualization-d3js">Data Visualization with D3.js</a>, dare ask me about publishers</li>
-            <li>published 3 editions of <a href="https://www.swizec.com/reactd3js/">React + D3</a></li>
+            <li>published 3 editions of <a href="https://www.swizec.com/reactd3js/">React + D3</a>, that's been great</li>
             <li>helped over 10,000 people become better engineers</li>
             <li>made this <a href="https://es6cheatsheet.com">interactive ES6 cheatsheet</a></li>
         </ul>
