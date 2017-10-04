@@ -26,7 +26,16 @@ module.exports = {
                             options: {
                                 classPrefix: `language-`
                             }
-                        }
+                        },
+                        {
+                            resolve: `gatsby-remark-images`,
+                            options: {
+                                maxWidth: 960,
+                                linkImagesToOriginal: true
+                            }
+                        },
+                        `gatsby-remark-copy-linked-files`,
+                        `gatsby-remark-autolink-headers`
                     ]
                 }
             }

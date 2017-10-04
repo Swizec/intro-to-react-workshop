@@ -29,3 +29,15 @@ React components right in the page and we're golden.
 
 One of those React in Markdown plugins. I wonder if it exists for
 Gatsby 🤔
+
+## This is an image
+
+![](http://www.mulierchile.com/random-image/random-image-005.jpg)
+
+```jsx
+const Comp = () => <div>Hai</div>
+```
+
+## This is a large image
+
+![With a beautiful caption](../images/large-2.jpg)

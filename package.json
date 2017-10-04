@@ -9,6 +9,9 @@
     "gatsby-plugin-react-helmet": "^1.0.5",
     "gatsby-plugin-styled-components": "^1.0.5",
     "gatsby-plugin-typography": "^1.7.10",
+    "gatsby-remark-autolink-headers": "^1.4.7",
+    "gatsby-remark-copy-linked-files": "^1.5.7",
+    "gatsby-remark-images": "^1.5.13",
     "gatsby-remark-prismjs": "^1.2.8",
     "gatsby-source-filesystem": "^1.5.2",
     "gatsby-transformer-remark": "^1.7.15",
@@ -25,7 +28,7 @@
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
-      "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "devDependencies": {
     "prettier": "^1.6.1"
