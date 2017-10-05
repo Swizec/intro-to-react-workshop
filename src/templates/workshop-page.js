@@ -3,10 +3,10 @@ import React from 'react';
 
 import { Hero } from '../elements';
 
+const chunk = <h1>hai</h1>;
+
 export default ({ data }) => {
     const page = data.markdownRemark;
-
-    console.log(page);
 
     return (
         <div>

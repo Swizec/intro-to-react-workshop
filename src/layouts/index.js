@@ -29,7 +29,7 @@ const Header = () => (
                  textShadow: 'none'
                  }}
           >
-          Intro to React Workshop
+        Intro to React 16 — <small>a Swizec Workshop</small>
         </Link>
       </h2>
     </div>
@@ -39,9 +39,9 @@ const Header = () => (
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="Intro to React workshop by Swizec"
+      title="Intro to React 16 - workshop by Swizec"
       meta={[
-        { name: 'description', content: 'Intro to Reacth workshop materials' },
+        { name: 'description', content: 'Intro to React 16 workshop materials' },
         { name: 'keywords', content: 'react, workshop' },
       ]}
     />
