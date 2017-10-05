@@ -1,8 +1,12 @@
 {
   "assetsByChunkName": {
+    "path---2-your-first-component": [
+      "path---2-your-first-component-69893dac1bc4fba36982.js",
+      "path---2-your-first-component-69893dac1bc4fba36982.js.map"
+    ],
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-a0dbbe5e2728e48daaf0.js",
-      "component---src-pages-index-js-a0dbbe5e2728e48daaf0.js.map"
+      "component---src-pages-index-js-10cb8576bf6c07caf759.js",
+      "component---src-pages-index-js-10cb8576bf6c07caf759.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
@@ -13,8 +17,12 @@
       "component---src-layouts-index-js-3ebbcec88a4260f96ccd.js.map"
     ],
     "path---index": [
-      "path---index-c0bc9170a95b7693bfec.js",
-      "path---index-c0bc9170a95b7693bfec.js.map"
+      "path---index-41649647fd1fe94e50ae.js",
+      "path---index-41649647fd1fe94e50ae.js.map"
+    ],
+    "path---4-code-a-project": [
+      "path---4-code-a-project-9fd308e478fb524d6b43.js",
+      "path---4-code-a-project-9fd308e478fb524d6b43.js.map"
     ],
     "component---src-pages-404-js": [
       "component---src-pages-404-js-4503918ea3a16cfcdb75.js",
@@ -28,23 +36,27 @@
       "path---404-html-a0e39f21c11f6a62c5ab.js",
       "path---404-html-a0e39f21c11f6a62c5ab.js.map"
     ],
-    "path---markdown-page": [
-      "path---markdown-page-852e367611ecce716c99.js",
-      "path---markdown-page-852e367611ecce716c99.js.map"
-    ],
     "app": [
-      "app-56a318816eb3221e76ed.js",
+      "app-1a9ea5f2a47fa165e769.js",
       "build-js-styles.css",
-      "app-56a318816eb3221e76ed.js.map",
+      "app-1a9ea5f2a47fa165e769.js.map",
       "build-js-styles.css.map"
     ],
     "path---404": [
       "path---404-a0e39f21c11f6a62c5ab.js",
       "path---404-a0e39f21c11f6a62c5ab.js.map"
     ],
+    "path---1-lay-of-the-land": [
+      "path---1-lay-of-the-land-4f87de2b35456380f9e2.js",
+      "path---1-lay-of-the-land-4f87de2b35456380f9e2.js.map"
+    ],
+    "path---3-your-first-app": [
+      "path---3-your-first-app-5c803836bcdf9ec3cda1.js",
+      "path---3-your-first-app-5c803836bcdf9ec3cda1.js.map"
+    ],
     "component---src-templates-workshop-page-js": [
-      "component---src-templates-workshop-page-js-94ee162280efc58648c1.js",
-      "component---src-templates-workshop-page-js-94ee162280efc58648c1.js.map"
+      "component---src-templates-workshop-page-js-c416b5a2f2f09de86e2c.js",
+      "component---src-templates-workshop-page-js-c416b5a2f2f09de86e2c.js.map"
     ]
   }
 }
