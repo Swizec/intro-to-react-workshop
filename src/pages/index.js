@@ -1,26 +1,29 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import { sortBy } from 'lodash';
 
 import RandomOwl from '../images/random-image-005.jpg';
 import MortysMindblowers from '../images/mortysmindblowers.mp4';
 import Swizec from '../images/swizec.jpg';
 
 const MDLink = ({ node }) => (
-    <li key={node.id}>
-        <Link to={node.fields.slug}>
-        {node.frontmatter.title} - {node.timeToRead} min read
-        </Link>
-    </li>
-)
-
-const ListContentPages = ({ data }) => (
     <div>
-        <h1>Setlist</h1>
-        <ul>
-            {data.allMarkdownRemark.edges.map(MDLink)}
-        </ul>
+        <h2><Link to={node.fields.slug}>{node.frontmatter.title}</Link></h2>
+        <div dangerouslySetInnerHTML={{ __html: node.tableOfContents }} />
     </div>
 );
+
+const ListContentPages = ({ data }) => {
+    const pages = data.allMarkdownRemark.edges;
+
+    return (
+        <div>
+            <h1>Setlist</h1>
+
+            {_.sortBy(pages, ({ node }) => node.fields.slug).map(MDLink)}
+        </div>
+    )
+};
 
 const Welcome = () => (
     <div>
@@ -62,7 +65,9 @@ const Start = () => (
         <p>This is an interactive workshop. If you have a question, <b>ask</b>. If something doesn't make sense, <b>ask</b>. If something is confusing, <b>ask</b>. If I'm not making sense, <b>ask</b>. If your code doesn't work, <b>ask</b>.</p>
         <p>You will write code today. The code will live on your computer.</p>
         <p>We will take breaks.</p>
-        <p>All code works with <b>React 16</b> and is written in modern <b>ES6+</b>. Code assumes a development environment created with <code>create-react-app</code>. This gives us some special powers. I will point them out.</p>
+        <h2>But first ask yourself this: Why are you here?</h2>
+        <p>Answering that question will help you get the most out of this workshop.</p>
+        <p>Code you'll write today works with <b>React 16</b> and uses modern <b>ES6+</b>. We'll assume a development environment created with <code>create-react-app</code>. This gives us some special powers. I will point them out.</p>
     </div>
 );
 
@@ -75,7 +80,7 @@ const IndexPage = ({ data }) => (
 
         <Start />
 
-        <p>Here's the setlist for today 👇</p>
+        <p>Here's our the setlist for today 👇</p>
 
         <ListContentPages data={data} />
     </div>
@@ -89,6 +94,7 @@ export const query = graphql`
         node {
           id
           timeToRead
+          tableOfContents
           frontmatter {
             title
           }

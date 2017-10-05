@@ -7,5 +7,9 @@ height: 500px;
 border: 0;
 `;
 
+const Hero = styled.h1`
+font-size: 2.5rem;
+`;
 
-export { Iframe };
+
+export { Iframe, Hero };
