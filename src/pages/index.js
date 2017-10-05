@@ -2,8 +2,8 @@ import React from 'react';
 import Link from 'gatsby-link';
 
 import RandomOwl from '../images/random-image-005.jpg';
+import MortysMindblowers from '../images/mortysmindblowers.mp4';
 import Swizec from '../images/swizec.jpg';
-import { Iframe } from '../elements';
 
 const MDLink = ({ node }) => (
     <li key={node.id}>
@@ -31,9 +31,9 @@ const Welcome = () => (
         <p>By the end of the day you'll have built your first React app.</p>
         <p>Something like this 👇</p>
 
-        <Iframe src="http://mortysmindblowers.fun" />
+        <video src={MortysMindblowers} controls autoPlay mute loop style={{width: '100%'}} />
 
-        <p><a href="http://mortysmindblowers.fun">Morty's Mindblowers</a> — it shows gifs from Imgur's frontpage stitched together with cutscenes from a Rick & Morty episode where Morty discovers deleted memories.</p>
+        <p><a href="http://mortysmindblowers.fun">Morty's Mindblowers</a> shows an endless stream of gifs from Imgur's frontpage stitched together with cutscenes from a Rick & Morty episode where Morty discovers deleted memories.</p>
     </div>
 );
 
