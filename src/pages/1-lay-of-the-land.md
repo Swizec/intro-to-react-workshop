@@ -239,3 +239,21 @@ We'll talk more about styling when we build our first component, routing when we
 One of the benefits of building webapps the React way is that they are easier to work with. That means testing and debugging.
 
 You should install the [React DevTools Chrome extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en). It allows you to inspect React components on the page, see their current state and props, observe redraws etc.
+
+Because React components rely only on their props and render in a virtual DOM, it's easy to write good test. Facebook has created a test runner called Jest designed specifically for testing React components.
+
+Here's an example test that `create-react-app` creates for us
+
+```jsx
+import App from './App';
+
+it('renders without crashing', () => {
+  const div = document.createElement('div');
+  ReactDOM.render(<App />, div);
+});
+```
+
+A lot of the time you don't even need to render into a DOM node. You can test drive a component on its own.
+
+We won't write tests in this workshop because I think we should focus on React itself.
+
