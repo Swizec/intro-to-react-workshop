@@ -9,7 +9,8 @@ import Swizec from '../images/swizec.jpg';
 const MDLink = ({ node }) => (
     <div key={node.id}>
         <h2><Link to={node.fields.slug}>{node.frontmatter.title}</Link></h2>
-        <div dangerouslySetInnerHTML={{ __html: node.tableOfContents }} />
+        <div dangerouslySetInnerHTML={{ __html: node.tableOfContents
+                                                    .replace(/\#/g, `${node.fields.slug}#`) }} />
     </div>
 );
 

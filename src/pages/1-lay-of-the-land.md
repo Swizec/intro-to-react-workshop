@@ -54,7 +54,7 @@ Yet the day never comes. You keep writing all of it, they keep being tightly cou
 
 It turns out "separation of concerns" in UI is more about separation of usecase than technology.
 
-![](../images/separation-of-concerns.png)
+[![](../images/separation-of-concerns.png)](http://www.didoo.net/2017/10/let-there-be-peace-on-css/)
 
 A button is always a button, a date picker is a date picker. Your UI is a series of components most of which you can develop separately and reuse over and over again.
 
@@ -133,16 +133,87 @@ As you'll see in future sections, bringing HTML into JavaScript is powerful. You
 
 # Modern build tools
 
+JSX, however, is not a part of JavaScript 👉 we have to use a compiler to make it work.
+
+JavaScript used to be something you write in a simple text editor, open in your browser, and see what happens. Nowadays it's becoming more and more a compiled language.
+
+Your code often runs through multiple compilers before it reaches the user. Everything from transforming ES5 into ES6 and beyond, to minifying your code and splitting it into bundles.
+
 ## Start with create-react-app
+
+To avoid the pain of setting all that stuff up from scratch, we're using a toolkit: [`create-react-app`](https://github.com/facebookincubator/create-react-app). It's the officially recommended way to bootstrap a new React application.
+
+Workshop code from this point onward assumes you're running inside a `create-react-app` project.
+
+In your terminal, run:
+
+```
+$ create-react-app intro-to-react-workshop-project
+$ cd intro-to-react-workshop-project
+```
+
+![](../images/create-react-app.gif)
+
+This creates a new directory with your app, uses `npm` or `yarn` to install dependencies, and comes with a great default config.
+
+Our code goes in `src/`, which right now contains a basic App, some CSS, an SVG image, and a test file. The environment is fully set up for you to write modern JavaScript code without worrying that this or that feature is unsupported.
+
+Run the development server.
+
+```
+$ npm/yarn start
+```
+
+![](../images/welcome-to-react.gif)
+
+The two most important tools `create-react-app` set up for us are [Webpack](https://webpack.js.org/) and [Babel](https://babeljs.io/). Webpack is our bundler and Babel is our JavaScript transpiler. Let me explain.
 
 ## Webpack
 
+![](https://webpack.js.org/bf093af83ee5548ff10fef24927b7cd2.svg)
+
+Webpack calls itself a module bundler. Its core task is to give us JavaScript modules.
+
+You write code in many different files, use `import` and `export` statements, and it all gets bundled up in one huge file for the browser to run. We've had this before Webpack with Browserify and tools like that.
+
+What we didn't have before Webpack is the ability to import *anything*. You can use Webpack to import CSS, images, video, any sort of file that you'd want to serve to your user.
+
+This happens through loaders, which are a lot like plugins. They're called loaders because they load things. 🤷‍♀️
+
+For example, when you import an image file, it turns into a URL string that you can use.
+
+```javascript
+import Morty from 'images/morty.png';
+
+console.log(Morty); // /static/media/1.40869a28.mp4
+```
+
+Fingerprinted for cache busting, moved into a `static/media` structure ... everything you need. 👌
+
+CSS turns into `<style></style>` tags, you can set up code splitting to avoid loading code your users don't need, throw away unused code and a bunch of other fun tweaks. I've been able to use Webpack configuration to send up to 50% less code to our users, for example.
+
+Webpack is great. ❤️
+
 ## Babel
 
+![](../images/babel.gif)
+
+Babel is a transpiler. It takes your modern JavaScript and returns old school JavaScript that works on all browsers.
+
+Like Webpack, it also comes in the shape of piles upon piles of plugins. Unlike Webpack, I find that it requires a lot less configuration and thinking about.
+
+Personally I like to rely on a couple of preset plugins and leave it at that. In theory you can start removing Babel plugins as browsers improve and you can ship more and more modern code.
+
+The fewer transforms you use, the smaller your code can become, but the newer the browser it requires. You are not likely to go without Babel any time soon.
+
 # React ecosystem
+
+
 
 ## Component styling
 
 ## Routing
+
+## Debugging/Testing
 
 ## Data management

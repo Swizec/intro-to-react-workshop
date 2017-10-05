@@ -40,7 +40,8 @@ module.exports = {
                   `gatsby-remark-autolink-headers`
               ]
           }
-      }
+      },
+      `gatsby-plugin-twitter`
   ],
   pathPrefix: `/intro-to-react-workshop`
 }
