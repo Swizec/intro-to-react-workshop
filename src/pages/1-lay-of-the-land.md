@@ -208,11 +208,19 @@ The fewer transforms you use, the smaller your code can become, but the newer th
 
 # React ecosystem
 
+My favorite part about React is its vast ecosystem. I'm hoping for a future where *"There's an open source component for that"* becomes the answer to almost everything.
 
+You know, like we used to have with jQuery, but better.
 
-## Component styling
+Right now you can already find a lot of pre-configured, pre-styled, widget components for almost anything you can think of. 
 
-## Routing
+NPM currently lists 38,692 packages containing the word `react`.
+
+![](../images/react-npm.png )
+
+## Some common dependencies
+
+React as such is 
 
 ## Debugging/Testing
 

@@ -7,3 +7,5 @@ title: "Your First Component"
 # Lifecycle hooks
 
 # UI as a state machine
+
+# Component styling
