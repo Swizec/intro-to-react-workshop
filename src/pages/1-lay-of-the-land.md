@@ -227,6 +227,15 @@ You can use it with any framework, even Angular or Backbone, or you can build yo
 Some common pieces that people use are 👇
 
 1. A state management library (usually Redux or MobX)
-2. A routing solution 
+2. A routing solution (often ReactRouter)
+3. A styling approach
+
+Those 3 choices often dictate the rest of the libraries you're going to use. Redux likes one way of handling forms, MobX another, for example. The styling library you choose, defines which helper libraries you can use etc.
+
+We'll talk more about styling when we build our first component, routing when we build our first app, and state management next week.
 
 ## Debugging/Testing
+
+One of the benefits of building webapps the React way is that they are easier to work with. That means testing and debugging.
+
+You should install the [React DevTools Chrome extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en). It allows you to inspect React components on the page, see their current state and props, observe redraws etc.
