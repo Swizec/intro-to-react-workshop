@@ -220,8 +220,13 @@ NPM currently lists 38,692 packages containing the word `react`.
 
 ## Some common dependencies
 
-React as such is 
+React on its own gives you just the view layer. The part that creates visual components and renders them to the browser.
+
+You can use it with any framework, even Angular or Backbone, or you can build your own out of tools available in the ecosystem. That's what most people do.
+
+Some common pieces that people use are 👇
+
+1. A state management library (usually Redux or MobX)
+2. A routing solution 
 
 ## Debugging/Testing
-
-## Data management
