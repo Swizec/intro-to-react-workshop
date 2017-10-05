@@ -7,7 +7,7 @@ import MortysMindblowers from '../images/mortysmindblowers.mp4';
 import Swizec from '../images/swizec.jpg';
 
 const MDLink = ({ node }) => (
-    <div>
+    <div key={node.id}>
         <h2><Link to={node.fields.slug}>{node.frontmatter.title}</Link></h2>
         <div dangerouslySetInnerHTML={{ __html: node.tableOfContents }} />
     </div>
@@ -34,7 +34,7 @@ const Welcome = () => (
         <p>By the end of the day you'll have built your first React app.</p>
         <p>Something like this 👇</p>
 
-        <video src={MortysMindblowers} controls autoPlay mute loop style={{width: '100%'}} />
+        <video src={MortysMindblowers} controls autoPlay mute="true" loop style={{width: '100%'}} />
 
         <p><a href="http://mortysmindblowers.fun">Morty's Mindblowers</a> shows an endless stream of gifs from Imgur's frontpage stitched together with cutscenes from a Rick & Morty episode where Morty discovers deleted memories.</p>
     </div>

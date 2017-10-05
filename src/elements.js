@@ -8,7 +8,9 @@ border: 0;
 `;
 
 const Hero = styled.h1`
-font-size: 2.5rem;
+font-size: 3rem;
+margin-top: 3.175rem;
+margin-bottom: 1.125rem;
 `;
 
 
