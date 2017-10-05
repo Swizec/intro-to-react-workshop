@@ -229,8 +229,9 @@ Some common pieces that people use are 👇
 1. A state management library (usually Redux or MobX)
 2. A routing solution (often ReactRouter)
 3. A styling approach
+4. Some way to talk to APIs (often GraphQL or fetch calls)
 
-Those 3 choices often dictate the rest of the libraries you're going to use. Redux likes one way of handling forms, MobX another, for example. The styling library you choose, defines which helper libraries you can use etc.
+Those 4 choices in some ways dictate the rest of the libraries you're going to use. Redux likes one way of handling forms, MobX another, for example. The styling library you choose, defines which helper libraries you can use, different data layers have different tooling etc.
 
 We'll talk more about styling when we build our first component, routing when we build our first app, and state management next week.
 
@@ -256,4 +257,8 @@ it('renders without crashing', () => {
 A lot of the time you don't even need to render into a DOM node. You can test drive a component on its own.
 
 We won't write tests in this workshop because I think we should focus on React itself.
+
+It's also a good idea to setup your text editor to support JSX syntax. Some are better at this than others, but I think most have at least *some* support by now.
+
+Oh and `create-react-app` comes with a bunch of creature comforts. You get automatic reloads when code changes, a linter watching your back, and beautiful error overlays when something goes wrong.
 
