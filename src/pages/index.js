@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import { sortBy } from 'lodash';
+import InstagramEmbed from 'react-instagram-embed';
 
 import RandomOwl from '../images/random-image-005.jpg';
 import MortysMindblowers from '../images/mortysmindblowers.mp4';
@@ -32,6 +33,7 @@ const Welcome = () => (
 
         <p>Welcome to Swizec's Intro to React Workshop. Today you will build your first webapp React and Friends.</p>
         <p>Your day starts at the very beginning: <em>Why React? What problem does it solve? What makes it tick? What's the ecosystem like? Why are components the future?</em></p>
+        <p><big><a href="http://tiny.cc/stubhub-slack">Join the Slack Group</a></big> it's the best place for everyone to communicate offline</p>
         <p>By the end of the day you'll have built your first React app.</p>
         <p>Something like this 👇</p>
 
@@ -84,6 +86,13 @@ const IndexPage = ({ data }) => (
         <p>Here's our the setlist for today 👇</p>
 
         <ListContentPages data={data} />
+
+        <h1>Before you leave</h1>
+        <p>Thank you for coming!</p>
+        <p>Please fill out <a href="tiny.cc/stubhub-react-feedback">this feedback form</a>. It helps me calibrate future workshops.</p>
+        <p>Enjoy this video of Kiwi</p>
+        <InstagramEmbed url="https://www.instagram.com/p/BR9xFYulmiL/" />
+        <p>Cheers,<br />~ Swizec</p>
     </div>
 );
 
