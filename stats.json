@@ -37,9 +37,9 @@
       "path---404-html-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-f7ea5b2d664586b0fe25.js",
+      "app-5dc70c0df669b8c46fbd.js",
       "build-js-styles.css",
-      "app-f7ea5b2d664586b0fe25.js.map",
+      "app-5dc70c0df669b8c46fbd.js.map",
       "build-js-styles.css.map"
     ],
     "path---404": [
@@ -55,8 +55,8 @@
       "path---3-your-first-app-fb3ebd606b85e1805d35.js.map"
     ],
     "component---src-templates-workshop-page-js": [
-      "component---src-templates-workshop-page-js-6fc4c49e15127674ede3.js",
-      "component---src-templates-workshop-page-js-6fc4c49e15127674ede3.js.map"
+      "component---src-templates-workshop-page-js-e1741b2c7df1deae51da.js",
+      "component---src-templates-workshop-page-js-e1741b2c7df1deae51da.js.map"
     ]
   }
 }
