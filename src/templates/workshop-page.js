@@ -15,7 +15,7 @@ export default ({ data }) => {
             <p>This segment covers👇 You can read the text in {page.timeToRead} minutes. Solving the exercises might take longer.</p>
 
             <div dangerouslySetInnerHTML={{ __html: page.tableOfContents}} />
-            <div dangerouslySetInnerHTML={{ __html: page.html.replace(/\/static/g, '/intro-to-react-workshop/static') }} />
+            <div dangerouslySetInnerHTML={{ __html: page.html }} />
 
         </div>
     )
