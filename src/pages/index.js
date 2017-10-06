@@ -74,12 +74,43 @@ const Start = () => (
     </div>
 );
 
+const ProjectLink = ({ url, children }) => (
+    <li><a href={url}>{children}</a></li>
+);
+
+const CoolThings = () => (
+    <div>
+        <h1>Here are some cool things I've built with React</h1>
+
+        <ul>
+            <ProjectLink url="http://swizec.github.io/react-d3-enter-exit-transitions/">
+                Animated typing
+            </ProjectLink>
+            <ProjectLink url="https://swizec.github.io/declarative-canvas-react-konva/">
+                Canvas billiards game
+            </ProjectLink>
+            <ProjectLink url="http://swizec.github.io/react-particles-experiment/">
+                Particle generator
+            </ProjectLink>
+            <ProjectLink url="https://swizec.github.io/react-fractals/">
+                Pythagorean fractal tree
+            </ProjectLink>
+            <ProjectLink url="http://swizec.github.io/space-invaders/">
+                Space Invaders
+            </ProjectLink>
+        </ul>
+
+        <p>No, these projects are not practical, but they demo well :)</p>
+    </div>
+);
+
 const IndexPage = ({ data }) => (
     <div>
         <img src={RandomOwl} title={`Literally first hit for "random image"`}/>
 
         <Welcome />
         <WhoSwiz />
+        <CoolThings />
 
         <Start />
 
