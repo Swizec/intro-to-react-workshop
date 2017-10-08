@@ -10,8 +10,7 @@ import Swizec from '../images/swizec.jpg';
 const MDLink = ({ node }) => (
     <div key={node.id}>
         <h2><Link to={node.fields.slug}>{node.frontmatter.title}</Link></h2>
-        <div dangerouslySetInnerHTML={{ __html: node.tableOfContents
-                                                    .replace(/\#/g, `${node.fields.slug}#`) }} />
+        <div dangerouslySetInnerHTML={{ __html: node.tableOfContents }} />
     </div>
 );
 
@@ -31,7 +30,7 @@ const Welcome = () => (
     <div>
         <h1>Hello new friend 👋</h1>
 
-        <p>Welcome to Swizec's Intro to React Workshop. Today you will build your first webapp React and Friends.</p>
+        <p>Welcome to Swizec's Intro to React Workshop. Today you will build your first webapp with React and Friends.</p>
         <p>Your day starts at the very beginning: <em>Why React? What problem does it solve? What makes it tick? What's the ecosystem like? Why are components the future?</em></p>
         <p><big><a href="http://tiny.cc/stubhub-slack">Join the Slack Group</a></big> it's the best place for everyone to communicate offline</p>
         <p>By the end of the day you'll have built your first React app.</p>
