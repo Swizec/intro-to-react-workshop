@@ -19,10 +19,15 @@ export default ({ data }) => {
             <div dangerouslySetInnerHTML={{ __html: page.tableOfContents }} />
             <div
                 dangerouslySetInnerHTML={{
-                    __html: page.html.replace(
-                        /(src\=\"|\/static)\/(.+?\.(gif|png|jpg|jpeg))/g,
-                        "$1/intro-to-react-workshop/$2"
-                    )
+                    __html: page.html
+                        .replace(
+                            /(src\=\")\/(.+?\.(gif|png|jpg|jpeg))/g,
+                            "$1/intro-to-react-workshop/$2"
+                        )
+                        .replace(
+                            /(\/static)\/(.+?\.(gif|png|jpg|jpeg))/g,
+                            "/intro-to-react-workshop$1$2"
+                        )
                 }}
             />
         </div>
