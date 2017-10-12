@@ -20,8 +20,8 @@ export default ({ data }) => {
             <div
                 dangerouslySetInnerHTML={{
                     __html: page.html.replace(
-                        /src\=\"\/(.+?\.(gif|png|jpg|jpeg))/g,
-                        'src="/intro-to-react-workshop/$1'
+                        /(src\=\"|\/static)\/(.+?\.(gif|png|jpg|jpeg))/g,
+                        "$1/intro-to-react-workshop/$2"
                     )
                 }}
             />
