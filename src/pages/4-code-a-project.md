@@ -1,7 +1,11 @@
 ---
-title: "Code a Project"
+title: "Intro to Redux"
 ---
 
-# Make Morty's Mindblowers your own
+# UI as a state machine
 
-# Ask me Anything
+# Redux vs MobX
+
+# reducers, actions, selectors
+
+# Async actions: Thunks vs Sagas
