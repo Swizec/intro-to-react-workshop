@@ -1,28 +1,32 @@
 {
   "assetsByChunkName": {
+    "path---5-build-stubhub-app": [
+      "path---5-build-stubhub-app-a3e4f834227a342e8d94.js",
+      "path---5-build-stubhub-app-a3e4f834227a342e8d94.js.map"
+    ],
     "path---2-your-first-component": [
       "path---2-your-first-component-e7113edd8144b59694a5.js",
       "path---2-your-first-component-e7113edd8144b59694a5.js.map"
     ],
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-cd97c147b5630f5f4a6e.js",
-      "component---src-pages-index-js-cd97c147b5630f5f4a6e.js.map"
+      "component---src-pages-index-js-0399314517914e722eb7.js",
+      "component---src-pages-index-js-0399314517914e722eb7.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
       "path----557518bd178906f8d58a.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-318f3cb449ae7fc9601c.js",
-      "component---src-layouts-index-js-318f3cb449ae7fc9601c.js.map"
+      "component---src-layouts-index-js-67b12efeb04b72723d33.js",
+      "component---src-layouts-index-js-67b12efeb04b72723d33.js.map"
     ],
     "path---index": [
-      "path---index-0d7ac88cf6264a8100b2.js",
-      "path---index-0d7ac88cf6264a8100b2.js.map"
+      "path---index-dad2e9e5550f193c28c5.js",
+      "path---index-dad2e9e5550f193c28c5.js.map"
     ],
     "path---4-code-a-project": [
-      "path---4-code-a-project-9fd308e478fb524d6b43.js",
-      "path---4-code-a-project-9fd308e478fb524d6b43.js.map"
+      "path---4-code-a-project-491076fbcc90b3372344.js",
+      "path---4-code-a-project-491076fbcc90b3372344.js.map"
     ],
     "component---src-pages-404-js": [
       "component---src-pages-404-js-4503918ea3a16cfcdb75.js",
@@ -37,9 +41,9 @@
       "path---404-html-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-5dc70c0df669b8c46fbd.js",
+      "app-1df6aff28a206bd4a99a.js",
       "build-js-styles.css",
-      "app-5dc70c0df669b8c46fbd.js.map",
+      "app-1df6aff28a206bd4a99a.js.map",
       "build-js-styles.css.map"
     ],
     "path---404": [
