@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+ <html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><link rel="preload" href="/intro-to-react-workshop/component---src-layouts-index-js-67b12efeb04b72723d33.js" as="script"/><link rel="preload" href="/intro-to-react-workshop/component---src-templates-workshop-page-js-7235880f02f890ea7421.js" as="script"/><link rel="preload" href="/intro-to-react-workshop/path---4-intro-to-redux-cc9a24ef43ffa6b5ba9f.js" as="script"/><link rel="preload" href="/intro-to-react-workshop/app-2b1c22f3f917c72e9e84.js" as="script"/><link rel="preload" href="/intro-to-react-workshop/commons-744bc15eeaa875bc0451.js" as="script"/><script id="webpack-manifest">
+            //<![CDATA[
+            window.webpackManifest = {"231608221292675":"app-2b1c22f3f917c72e9e84.js","277302972944098":"component---src-templates-workshop-page-js-7235880f02f890ea7421.js","162898551421021":"component---src-pages-404-js-4503918ea3a16cfcdb75.js","35783957827783":"component---src-pages-index-js-0399314517914e722eb7.js","60335399758886":"path----557518bd178906f8d58a.js","254462158457447":"path---1-lay-of-the-land-631823dfa3e13b9b02ab.js","28404353185273":"path---2-your-first-component-e7113edd8144b59694a5.js","258462891974764":"path---3-your-first-app-fb3ebd606b85e1805d35.js","4744593790359":"path---5-build-stubhub-app-a3e4f834227a342e8d94.js","257795304914887":"path---4-intro-to-redux-cc9a24ef43ffa6b5ba9f.js","254022195166212":"path---404-a0e39f21c11f6a62c5ab.js","142629428675168":"path---index-8d73ec49656863a76465.js","178698757827068":"path---404-html-a0e39f21c11f6a62c5ab.js","114276838955818":"component---src-layouts-index-js-67b12efeb04b72723d33.js"}
+            //]]>
+            </script><style type="text/css" data-styled-components="bfTSvt" data-styled-components-is-local="true">/* sc-component-id: sc-bwzfXH */
+
+.bfTSvt{font-size:3rem;margin-top:3.175rem;margin-bottom:1.125rem;}
+</style><title data-react-helmet="true">Intro to React 16 - workshop by Swizec</title><meta data-react-helmet="true" name="description" content="Intro to React 16 workshop materials"/><meta data-react-helmet="true" name="keywords" content="react, workshop"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:106.25%/1.45em 'Cabin',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:'Cabin',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.16rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.16rem;color:hsla(0,0%,0%,0.9);font-family:'Arvo',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.16rem;color:hsla(0,0%,0%,0.9);font-family:'Arvo',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.16rem;color:hsla(0,0%,0%,0.9);font-family:'Arvo',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.16rem;color:hsla(0,0%,0%,0.9);font-family:'Arvo',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.16rem;color:hsla(0,0%,0%,0.9);font-family:'Arvo',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.16rem;color:hsla(0,0%,0%,0.9);font-family:'Arvo',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.16rem;}ul{margin-left:1.45rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.16rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.45rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.16rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.16rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.16rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.16rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.16rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.16rem;font-size:0.85rem;line-height:1.45rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.16rem;font-size:1rem;line-height:1.45rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.16rem;}blockquote{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0.90625rem;padding-right:0;padding-top:0;margin-bottom:1.16rem;font-size:1.1487rem;line-height:1.45rem;border-left:0.54375rem solid #ff483b;color:hsla(0,0%,0%,0.65);font-style:italic;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.16rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.16rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.16rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.16rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.16rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.16rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.45rem;margin-bottom:calc(1.16rem / 2);margin-top:calc(1.16rem / 2);}li > ul{margin-left:1.45rem;margin-bottom:calc(1.16rem / 2);margin-top:calc(1.16rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.16rem / 2);}code{font-size:0.85rem;line-height:1.45rem;}kbd{font-size:0.85rem;line-height:1.45rem;}samp{font-size:0.85rem;line-height:1.45rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:0.96667rem;padding-right:0.96667rem;padding-top:0.725rem;padding-bottom:calc(0.725rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}a{color:#ff483b;text-decoration:none;text-shadow:.03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;background-image:linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, #ff483b 1px, #ff483b 2px, rgba(0, 0, 0, 0) 2px);}a:hover,a:active{text-shadow:none;background-image:none;}h1,h2,h3,h4,h5,h6{line-height:1.2;margin-top:2.175rem;margin-bottom:0.725rem;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.45rem;color:hsla(0,0%,0%,0.8);font-style:normal;font-weight:400;}blockquote cite:before{content:"— ";}@media only screen and (max-width:480px){blockquote{border-left:0.27187rem solid #ff483b;padding-left:0.81562rem;font-style:italic;margin-left:-1.0875rem;margin-right:0;}}</style><link href="//fonts.googleapis.com/css?family=Arvo:700|Cabin:400,400i,700" rel="stylesheet" type="text/css"/><style type="text/css">
+    .anchor {
+      float: left;
+      padding-right: 4px;
+      margin-left: -20px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = location.hash.replace('#', '')
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var offset = element.offsetTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><script>
+  !function(e,t,r){function n(){for(;d[0]&&"loaded"==d[0][f];)c=d.shift(),c[o]=!i.parentNode.insertBefore(c,i)}for(var s,a,c,d=[],i=e.scripts[0],o="onreadystatechange",f="readyState";s=r.shift();)a=e.createElement(t),"async"in i?(a.async=!1,e.head.appendChild(a)):i[f]?(d.push(a),a[o]=n):e.write("<"+t+' src="'+s+'" defer></'+t+">"),a.src=s}(document,"script",[
+  "/intro-to-react-workshop/commons-744bc15eeaa875bc0451.js","/intro-to-react-workshop/app-2b1c22f3f917c72e9e84.js","/intro-to-react-workshop/path---4-intro-to-redux-cc9a24ef43ffa6b5ba9f.js","/intro-to-react-workshop/component---src-templates-workshop-page-js-7235880f02f890ea7421.js","/intro-to-react-workshop/component---src-layouts-index-js-67b12efeb04b72723d33.js"
+])
+  </script><style id="gatsby-inlined-css">code[class*=language-],pre[class*=language-]{color:#f8f8f2;background:none;text-shadow:0 1px rgba(0,0,0,.3);font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#f8f8f2}.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.gatsby-highlight{background-color:#272822;border-radius:.3em;margin:.5em 0;padding:1em;overflow:auto}.gatsby-highlight pre[class*=language-]{background-color:transparent;margin:0;padding:0;overflow:visible;overflow:initial;float:left;min-width:100%}.gatsby-highlight-code-line{background-color:hsla(0,0%,100%,.3);display:block;margin-right:-1em;margin-left:-1em;padding-right:1em;padding-left:.75em;border-left:.25em solid #f99}p{max-width:760px}</style></head><body><div id="___gatsby"><div data-reactroot=""><div style="background:rebeccapurple;margin-bottom:1.45rem"><div style="margin:0 auto;max-width:960px;padding:1.45rem 1.0875rem"><h2 style="margin:0"><a style="color:white;text-decoration:none;text-shadow:none" href="/intro-to-react-workshop/">Intro to React 16 &amp; Redux — <small>a Swizec Workshop</small></a></h2></div></div><div style="margin:0 auto;max-width:960px;padding:0px 1.0875rem 1.45rem;padding-top:0"><div><h1 class="sc-bwzfXH bfTSvt">Intro to Redux</h1><p>This segment covers👇 You can read the text in <!-- -->11<!-- --> <!-- -->minutes. Solving the exercises might take longer.</p><div><ul>
+<li>
+<p><a href="#why-redux">Why Redux</a></p>
+<ul>
+<li><a href="#how-redux-solves-the-refactoring-problem">How Redux solves the refactoring problem</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#ui-as-a-state-machine">UI as a state machine</a></p>
+<ul>
+<li><a href="#practical-exercise--state-machine-for-a-toggle">Practical exercise – state machine for a toggle</a></li>
+<li><a href="#practical-exercise--state-machine-for-our-app">Practical exercise – state machine for our app</a></li>
+<li><a href="#smart-and-dumb-components">Smart and Dumb components</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#redux-vs-mobx">Redux vs MobX</a></p>
+<ul>
+<li><a href="#what-about-immutablejs">What about immutable.js</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#reducers-actions-selectors">reducers, actions, selectors</a></p>
+<ul>
+<li><a href="#reducer">Reducer</a></li>
+<li><a href="#action">Action</a></li>
+<li><a href="#selectors">Selectors</a></li>
+<li><a href="#idiomatic-redux">Idiomatic Redux</a></li>
+<li><a href="#performance">Performance</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#async-actions-thunks-vs-sagas">Async actions: Thunks vs Sagas</a></p>
+<ul>
+<li><a href="#thunks">Thunks</a></li>
+<li><a href="#sagas">Sagas</a></li>
+</ul>
+</li>
+</ul></div><div><p>Welcome to the Redux part of this workshop. Today we're going to build a small StubHub app that:</p>
+<ol>
+<li>loads events in San Francisco from StubHub's API</li>
+<li>lets you find what you want</li>
+<li>add it to a shopping car</li>
+<li>fake buy it</li>
+</ol>
+<p><video src="https://github.com/Swizec/intro-to-react-workshop/raw/master/src/images/stubhub-app.mp4" autoplay mute controls style="width: 100%"></video></p>
+<p>To build it we're going use a few different opensource packages. <a href="http://redux.js.org/">Redux</a> will help us manage state, <a href="https://github.com/paypal/downshift">Downshift</a> will help us build filtering, <a href="https://redux-form.com/7.1.1/">redux-form</a> will help us manage the checkout form, and we'll use <a href="https://github.com/styled-components/styled-components">styled components</a> for styling.</p>
+<p>But let's start at the beginning. <em>What is Redux? What's the point?</em></p>
+<h1 id="why-redux"><a href="#why-redux" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Why Redux</h1>
+<p>Redux is a state management system built on the unidirectional dataflow principle. Data lives in a central repository of truth and flows down into your components via props. Those components issue actions to change state.</p>
+<p><img src="https://images.contentful.com/s72atsk5w5jo/3gM6ZNauDKG22CeIkYQwY8/1591f4fb993a474dcc744486254e4914/swift-unidirectional-diagram.png"></p>
+<p>In our earlier examples we achieved this effect by using the top component as a sort of store. Info about our entire app state went into a top component <code>this.state</code>. Data flowed down via props and we used callbacks to move information back up and change state.</p>
+<p>This works great for small apps and one-off projects, but as your app and your team grows, it gets messy.</p>
+<p>Say you have a button that lives in a component that's nested 10 levels deep. All those 10 levels have to know about the stuff your button needs, they have to pass down props, they have to pass callbacks.</p>
+<p>Kind of annoying ...</p>
+<p>Then your designer says <em>"You know what, we should move that button"</em>. Great, you say and roll up your sleeves to change the entire hierarchy leading to that button. Every little component that was passing props and callback that button was using needs to change.</p>
+<p>And then you get to rewire it into a new spot in its hierarchy. Wonderful.</p>
+<p><code>&#x3C;swizec demonstrates on a whiteboard></code></p>
+<p>Remind Swizec to take a photo and put it here for posterity.</p>
+<h2 id="how-redux-solves-the-refactoring-problem"><a href="#how-redux-solves-the-refactoring-problem" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How Redux solves the refactoring problem</h2>
+<p>Redux solves this problem in a couple of ways.</p>
+<ol>
+<li>The data store becomes globally accessible. Any component that needs access can get it directly from anywhere in the app. No more long prop-passing chains.</li>
+<li>Anyone can fire an action from anywhere. No more long callback-passing chains.</li>
+<li>The shape of your business logic becomes detangled from the shape of your UI design.</li>
+</ol>
+<p>That last part has been most helpful in my own projects. </p>
+<p>When you can look at your app's whole business logic in an abstract way that's separate from your UI, and your UI is just an expression of app state ... well ... life is easier :D</p>
+<p>You can think about, develop, and test your logic and your UI separately. Components render, Redux machinery deals with state.</p>
+<p>Your whole app becomes a state machine, in fact.</p>
+<h1 id="ui-as-a-state-machine"><a href="#ui-as-a-state-machine" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>UI as a state machine</h1>
+<p>With good separation of concerns between your business logic and your rendering logic, you can start to think of your app as a state machine. This has several benefits:</p>
+<ol>
+<li>Easier debugging – if you know all of the state in one moment, you can replicate it as many times as you want</li>
+<li>Time-traveling – record state transitions, replay them</li>
+<li>Always know what action caused a change to happen</li>
+<li>Easy to tell exactly how an action affects state</li>
+</ol>
+<p>With small apps, you can draw out the entire state machine and keep it in your mind's eye as you work. You'd be surprised for how big of an app this still works.</p>
+<p>As your app grows it becomes more like a combination of smaller state machines. While this makes it harder to understand your app as a whole, idiomatic use of Redux still ensures that different state machines don't bleed into one another. This means understanding them separately is okay and works well.</p>
+<h2 id="practical-exercise--state-machine-for-a-toggle"><a href="#practical-exercise--state-machine-for-a-toggle" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Practical exercise – state machine for a toggle</h2>
+<p>Let's draw a simple state machine for a toggle. Just to get our feet wet.</p>
+<p><code>&#x3C;whiteboard art time></code></p>
+<h2 id="practical-exercise--state-machine-for-our-app"><a href="#practical-exercise--state-machine-for-our-app" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Practical exercise – state machine for our app</h2>
+<p>Something more complex. Let's draw a state machine for our StubHub app together.</p>
+<p><code>&#x3C;whiteboard art time></code></p>
+<p>Keep this in mind as we build our app in the next section. It will help you decide what code to write.</p>
+<h2 id="smart-and-dumb-components"><a href="#smart-and-dumb-components" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Smart and Dumb components</h2>
+<p>A common pattern when separating your business and view logic is to have smart and dumb components.</p>
+<p>Smart components are those that are aware of your data store. They read values from Redux, issue actions, and are generally aware that Redux exists.</p>
+<p>Dumb components are those that render purely from props and issue callbacks, which they get from props, to make changes. These have no idea that Redux exists.</p>
+<h1 id="redux-vs-mobx"><a href="#redux-vs-mobx" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Redux vs MobX</h1>
+<p>As you research state management libraries for React apps, you are likely to come upon two main competitors: Redux and MobX.</p>
+<p>Redux follows a functional programming approach. Every change creates a new copy of your state. This is super safe but smells wasteful as your app grows (even though it's really fast). It can lead to a lot of boilerplate.</p>
+<p>MobX follows a reactive programming approach. Changes mutate your state, but a bunch of behind-the-scenes machinery keeps this safe and ensures every component knows about every change. This often results in performance gains and leads to less code that you have to write.</p>
+<p>Redux is backed by Facebook and used by many industry giants. The community is huge and the mindshare immense.</p>
+<p>MobX is backed by a consulting shop from Europe and used by some industry giants. The community is passionate and amazing, but smaller than Redux.</p>
+<p>If you're used to Backbone and you've been using it in an idiomatic way, then MobX is going to feel more natural. It follows the same principle of subscribing to data changes as Backbone Models/Views do, but makes it feasible with a smarter engine.</p>
+<p>Fundamentally both Redux and MobX give you the same end result: Understandable app architecture with explicit state transitions. A state machine.</p>
+<h2 id="what-about-immutablejs"><a href="#what-about-immutablejs" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What about immutable.js</h2>
+<p>Immutable.js is great, but I haven't used it personally because I can never tell how much benefit it brings. It's probably a lot like static typing, the bigger your team becomes, the more benefit you get from tools that force good habits.</p>
+<p>Redux strongly encourages you to treat your data as immutable, but it's easy to stray. Especially when it comes to large nested objects.</p>
+<p>Immutable solves that by implementing immutable data structures on top of JavaScript. If you want to mutate something, you can't.</p>
+<p>In theory it has amazing performance but at the end of the day, until immutability is built into JavaScript on the language/engine level, it's not going to be as fast as it could.</p>
+<h1 id="reducers-actions-selectors"><a href="#reducers-actions-selectors" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>reducers, actions, selectors</h1>
+<p>Let's look at our state machine again. </p>
+<p><code>&#x3C;point at whiteboard drawing, paste here image></code></p>
+<p>See the circles? Those represent our state as a result of different actions. We calculate those using reducers.</p>
+<p>Reducers are functions that take current state and information about what to do, and calculate new state. Think of them as those functions you pass into <code>.reduce</code>.</p>
+<div class="gatsby-highlight">
+      <pre class="language-javascript"><code><span class="token keyword">const</span> sum <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span>mem<span class="token punctuation">,</span> n<span class="token punctuation">)</span> <span class="token operator">=></span> mem<span class="token operator">+</span>n<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 15</span>
+<span class="token comment" spellcheck="true">/*
+   mem  n
+1: 0    1
+2: 1    2
+3: 3    3
+4: 6    4
+5: 10   5
+6: 15
+
+*/</span>
+</code></pre>
+      </div>
+<h2 id="reducer"><a href="#reducer" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reducer</h2>
+<p><em>The</em> Redux reducer performs this same operation on our whole Redux store. We usually write it as a combination of reducers that each take care of their own part of the state tree.</p>
+<p>Our app is going to have 4 reducers:</p>
+<ol>
+<li>List of available events</li>
+<li>Shopping cart</li>
+<li>Purchase history and user info</li>
+<li>Transient form state</li>
+</ol>
+<p>Redux reducers take the current state, our store, and an action as their input. The action tells them what to do.</p>
+<h2 id="action"><a href="#action" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Action</h2>
+<p>Actions are the arrows in our state machine. They tell which state we're transitioning to based on what happened.</p>
+<p>Technically actions are objects that have a type and some properties. The type tells reducers what to do, the other stuff gives them data to use.</p>
+<p>In practice, actions are functions that return those objects. Action generators if you will.</p>
+<h2 id="selectors"><a href="#selectors" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Selectors</h2>
+<p>Selectors are functions that help us get data out of our store. Basic selectors don't much more than access values and return them.</p>
+<p>More advanced selectors can derive computed values, combine multiple selectors, memoize their results and so on. Using the <a href="https://github.com/reactjs/reselect">reselect</a> library for your more complex selectors is a good idea.</p>
+<p>Reselect automatically memoizes your selectors to improve performance.</p>
+<h2 id="idiomatic-redux"><a href="#idiomatic-redux" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Idiomatic Redux</h2>
+<p>The community has developed several idioms over the years that make Redux easier to write. They reduce boilerplate, but I fear make Redux code harder to understand for newcomers.</p>
+<p>For example, a basic smart component accesses its data store through React context, subscribes to changes, and manually dispatches actions. Like this 👇</p>
+<div class="gatsby-highlight">
+      <pre class="language-jsx"><code><span class="token keyword">class</span> <span class="token class-name">Counter</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+    <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> <span class="token punctuation">{</span> store <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>context<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>unsubscribe <span class="token operator">=</span> store<span class="token punctuation">.</span><span class="token function">subscribe</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">forceUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">componentWillUnmount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">unsubscribe</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    onClick <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">this</span><span class="token punctuation">.</span>context<span class="token punctuation">.</span>store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token function">incAction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    
+    <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> <span class="token punctuation">{</span> store <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>context<span class="token punctuation">;</span>
+        <span class="token keyword">const</span> state <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        
+        <span class="token keyword">return</span> <span class="token punctuation">(</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+                <span class="token punctuation">{</span>state<span class="token punctuation">.</span>count<span class="token punctuation">}</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>inc<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token operator">+</span><span class="token number">1</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>div
+        <span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+Counter<span class="token punctuation">.</span>contextTypes <span class="token operator">=</span> <span class="token punctuation">{</span>
+    store<span class="token punctuation">:</span> PropTypes<span class="token punctuation">.</span>object
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+      </div>
+<p>We subscribe to store updates in <code>componentDidMount</code>, unsubscribe in <code>componentWillUnmount</code>. When a user clicks the button, we <code>dispatch</code> the <code>incAction</code>.</p>
+<p>This gets tedious, so we can use the <code>connect()</code> method instead. That reduces this example to just a few lines:</p>
+<div class="gatsby-highlight">
+      <pre class="language-jsx"><code><span class="token keyword">const</span> Counter <span class="token operator">=</span> <span class="token function">connect</span><span class="token punctuation">(</span>state <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+    count<span class="token punctuation">:</span> state<span class="token punctuation">.</span>count
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    inc<span class="token punctuation">:</span> incAction
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">{</span> count<span class="token punctuation">,</span> inc <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+        <span class="token punctuation">{</span>count<span class="token punctuation">}</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>inc<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token operator">+</span><span class="token number">1</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+      </div>
+<p>Much better isn't it? Sure gets hard to understand if you're not used to it :D</p>
+<p>Connect takes 2 arguments:</p>
+<ol>
+<li>A <code>mapStateToProps</code> function takes data out of state and puts it in component props. This is where you'd use selectors.</li>
+<li>A <code>mapDispatchToProps</code> function takes action functions and wraps them in the appropriate dispatch call</li>
+</ol>
+<p>This creates a container higher order component to which you pass your presentational component. It gets data and callbacks from props, renders them, and triggers callbacks when necessary.</p>
+<p>If this is too hard to read, you can split it up into separate functions.</p>
+<div class="gatsby-highlight">
+      <pre class="language-jsx"><code><span class="token keyword">const</span> Counter <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> count<span class="token punctuation">,</span> inc <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+        <span class="token punctuation">{</span>count<span class="token punctuation">}</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>inc<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token operator">+</span><span class="token number">1</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> mapStateToProps <span class="token operator">=</span> state <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+    count<span class="token punctuation">:</span> state<span class="token punctuation">.</span>count
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> mapDispatchToProps <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+    inc<span class="token punctuation">:</span> incAction
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> CounterContainer <span class="token operator">=</span> <span class="token function">connect</span><span class="token punctuation">(</span>mapStateToProps<span class="token punctuation">,</span> mapDispatchToProps<span class="token punctuation">)</span><span class="token punctuation">(</span>Counter<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+      </div>
+<h2 id="performance"><a href="#performance" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Performance</h2>
+<p>So how slow is it to throw away and rebuild your whole state tree on every change?</p>
+<p>First of all, you're not. Depending on how you build your reducers, you can achieve spectacular granulation of changes.</p>
+<p>Second of all, here is an example that animates almost 30,000 elements driven purely through Redux. <a href="http://swizec.github.io/react-particles-experiment/">link</a> It even works well on a phone.</p>
+<p>If JavaScript can handle rebuilding a 30,000 element array every 16 milliseconds, it can probably handle your state tree too :)</p>
+<h1 id="async-actions-thunks-vs-sagas"><a href="#async-actions-thunks-vs-sagas" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Async actions: Thunks vs Sagas</h1>
+<p>Things get a little tricky when you want to use asynchronous actions or actions that dispatch other actions.</p>
+<p>I like to think of actions as semantic APIs. When you call it from a component, something meaningful has to happen. Otherwise it's hard to fully take business logic out of component logic.</p>
+<p>Two approaches exist: Thunks and Sagas.</p>
+<h2 id="thunks"><a href="#thunks" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Thunks</h2>
+<p>Thunks are enabled by the <a href="https://github.com/gaearon/redux-thunk">thunk-middleware</a>. They are actions that return a function. This function gets access to the store and can dispatch more actions.</p>
+<p>A common pattern is when fetching data:</p>
+<div class="gatsby-highlight">
+      <pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">getStubHubEvents</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>dispatch<span class="token punctuation">,</span> getState<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		Api<span class="token punctuation">.</span><span class="token function">events</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+			 <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>events <span class="token operator">=></span> <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+				 type<span class="token punctuation">:</span> <span class="token string">"GOT_EVENTS"</span><span class="token punctuation">,</span>
+				 events
+			 <span class="token punctuation">}</span><span class="token punctuation">)</span>
+			 <span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>error <span class="token operator">=></span> <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+				 type<span class="token punctuation">:</span> <span class="token string">"ERROR"</span><span class="token punctuation">,</span>
+				 error
+			 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+      </div>
+<p>The main action acts as a semantic API to use in our components,  the action dispatched from the fetch Promise tells reducers to do stuff.</p>
+<p>This is my favorite approach to build large complex actions. It's clear and does a great job of following the principle of least surprise. Calling an action never results in anything unexpected because you can readily see its whole flow.</p>
+<h2 id="sagas"><a href="#sagas" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sagas</h2>
+<p>Sagas are enabled by the <a href="https://github.com/redux-saga/redux-saga">saga middleware</a>. They act as observers and react to dispatched actions.</p>
+<p>You build sagas as JavaScript generators and use the built-in semantics of putting, forking, calling, etc. to describe what you want and when. </p>
+<p>Sagas make it easy to implement channels and other multithreaded approaches to dealing with state updates. They're also a way to achieve canellable actions.</p>
+<p>What I personally don't like about sagas is that they're like a weaker more confusing version of MobX. ¯_(ツ)_/¯</p>
+<p>Here's what an example Saga looks like:</p>
+<div class="gatsby-highlight">
+      <pre class="language-javascript"><code><span class="token comment" spellcheck="true">// worker Saga: will be fired on USER_FETCH_REQUESTED actions</span>
+<span class="token keyword">function</span><span class="token operator">*</span> <span class="token function">fetchUser</span><span class="token punctuation">(</span>action<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token keyword">try</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> user <span class="token operator">=</span> <span class="token keyword">yield</span> <span class="token function">call</span><span class="token punctuation">(</span>Api<span class="token punctuation">.</span>fetchUser<span class="token punctuation">,</span> action<span class="token punctuation">.</span>payload<span class="token punctuation">.</span>userId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">yield</span> <span class="token function">put</span><span class="token punctuation">(</span><span class="token punctuation">{</span>type<span class="token punctuation">:</span> <span class="token string">"USER_FETCH_SUCCEEDED"</span><span class="token punctuation">,</span> user<span class="token punctuation">:</span> user<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">yield</span> <span class="token function">put</span><span class="token punctuation">(</span><span class="token punctuation">{</span>type<span class="token punctuation">:</span> <span class="token string">"USER_FETCH_FAILED"</span><span class="token punctuation">,</span> message<span class="token punctuation">:</span> e<span class="token punctuation">.</span>message<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">/*
+  Starts fetchUser on each dispatched `USER_FETCH_REQUESTED` action.
+  Allows concurrent fetches of user.
+*/</span>
+<span class="token keyword">function</span><span class="token operator">*</span> <span class="token function">mySaga</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">yield</span> <span class="token function">takeEvery</span><span class="token punctuation">(</span><span class="token string">"USER_FETCH_REQUESTED"</span><span class="token punctuation">,</span> fetchUser<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">/*
+  Alternatively you may use takeLatest.
+
+  Does not allow concurrent fetches of user. If "USER_FETCH_REQUESTED" gets
+  dispatched while a fetch is already pending, that pending fetch is cancelled
+  and only the latest one will be run.
+*/</span>
+<span class="token keyword">function</span><span class="token operator">*</span> <span class="token function">mySaga</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">yield</span> <span class="token function">takeLatest</span><span class="token punctuation">(</span><span class="token string">"USER_FETCH_REQUESTED"</span><span class="token punctuation">,</span> fetchUser<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> mySaga<span class="token punctuation">;</span>
+</code></pre>
+      </div>
+<p>The first saga calls a User API and yields a result action when the fetch is done. The other two are different versions of subscribing to the <code>USER_FETCH_REQUESTED</code> action.</p>
+<p>We're relying on thunks in our example project. I couldn't find a good excuse to use sagas.</p></div></div></div></div></div><script>
+          window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));
+      </script></body></html>

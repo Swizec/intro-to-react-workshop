@@ -21,12 +21,8 @@
       "component---src-layouts-index-js-67b12efeb04b72723d33.js.map"
     ],
     "path---index": [
-      "path---index-dad2e9e5550f193c28c5.js",
-      "path---index-dad2e9e5550f193c28c5.js.map"
-    ],
-    "path---4-code-a-project": [
-      "path---4-code-a-project-491076fbcc90b3372344.js",
-      "path---4-code-a-project-491076fbcc90b3372344.js.map"
+      "path---index-8d73ec49656863a76465.js",
+      "path---index-8d73ec49656863a76465.js.map"
     ],
     "component---src-pages-404-js": [
       "component---src-pages-404-js-4503918ea3a16cfcdb75.js",
@@ -41,9 +37,9 @@
       "path---404-html-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-1df6aff28a206bd4a99a.js",
+      "app-2b1c22f3f917c72e9e84.js",
       "build-js-styles.css",
-      "app-1df6aff28a206bd4a99a.js.map",
+      "app-2b1c22f3f917c72e9e84.js.map",
       "build-js-styles.css.map"
     ],
     "path---404": [
@@ -53,6 +49,10 @@
     "path---1-lay-of-the-land": [
       "path---1-lay-of-the-land-631823dfa3e13b9b02ab.js",
       "path---1-lay-of-the-land-631823dfa3e13b9b02ab.js.map"
+    ],
+    "path---4-intro-to-redux": [
+      "path---4-intro-to-redux-cc9a24ef43ffa6b5ba9f.js",
+      "path---4-intro-to-redux-cc9a24ef43ffa6b5ba9f.js.map"
     ],
     "path---3-your-first-app": [
       "path---3-your-first-app-fb3ebd606b85e1805d35.js",
