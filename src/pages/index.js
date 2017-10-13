@@ -215,8 +215,9 @@ const IndexPage = ({ data }) => (
         <p>Thank you for coming!</p>
         <p>
             Please fill out{" "}
-            <a href="tiny.cc/stubhub-react-feedback">this feedback form</a>. It
-            helps me calibrate future workshops.
+            <a href="http://tiny.cc/stubhub-redux-feedback">
+                this feedback form
+            </a>. It helps me calibrate future workshops.
         </p>
         <p>Enjoy this video of Kiwi</p>
         <InstagramEmbed url="https://www.instagram.com/p/BR9xFYulmiL/" />
