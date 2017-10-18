@@ -70,13 +70,13 @@ As your app grows it becomes more like a combination of smaller state machines. 
 
 Let's draw a simple state machine for a toggle. Just to get our feet wet.
 
-`<whiteboard art time>`
+![](../images/toggle_state_machine.jpg)
 
 ## Practical exercise – state machine for our app
 
 Something more complex. Let's draw a state machine for our StubHub app together.
 
-`<whiteboard art time>`
+![](../images/app_state_machine.jpg)
 
 Keep this in mind as we build our app in the next section. It will help you decide what code to write.
 
@@ -118,7 +118,7 @@ In theory it has amazing performance but at the end of the day, until immutabili
 
 Let's look at our state machine again. 
 
-`<point at whiteboard drawing, paste here image>`
+![](../images/reducers_actions_selectors.jpg)
 
 See the circles? Those represent our state as a result of different actions. We calculate those using reducers.
 
