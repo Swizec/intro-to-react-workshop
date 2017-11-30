@@ -41,7 +41,16 @@ module.exports = {
                 ]
             }
         },
-        `gatsby-plugin-twitter`
+        `gatsby-plugin-twitter`,
+        `gatsby-plugin-nprogress`,
+        {
+            resolve: `gatsby-remark-code-repls`,
+            options: {
+                externals: ["//unpkg.com/react/umd/react.development.js"],
+                html: '<div id="root"></div>',
+                directory: `${__dirname}/examples/`
+            }
+        }
     ],
     pathPrefix: `/intro-to-react-workshop`
 };
