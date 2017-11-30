@@ -1,2 +1,0 @@
-webpackJsonp([0x81b8806e4260],{"./node_modules/json-loader/index.js!./.cache/json/index.json":function(e,o){e.exports={data:{allMarkdownRemark:{totalCount:1,edges:[{node:{id:"/Users/Swizec/Documents/random-coding/intro-to-react-workshop/src/pages/markdown-page.md absPath of file >>> MarkdownRemark",frontmatter:{title:"This page is markdown"},fields:{slug:"/markdown-page/"}}}]}},pathContext:{}}}});
-//# sourceMappingURL=path---index-ea90b6c309117df8da4a.js.map
