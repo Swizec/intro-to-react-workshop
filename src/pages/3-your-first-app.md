@@ -98,15 +98,9 @@ And you use `<Link>` to link between pages.
 
 This workshop page is built using [GatsbyJS](https://www.gatsbyjs.org/) and uses ReactRouter behind the scenes.
 
-# Server-side rendering
-
-Copy approach from [Swizec's blogpost](https://swizec.com/blog/server-side-rendering-d3-chart-react-16/swizec/7824) and explore it together.
-
-Server side rendering is a popular buzzword, but it probably doesn't matter as much as you think it does. Yes it can make your webapp feel snappier in some cases, and it has a marginal effect on SEO, but it's often more trouble than it's worth.
-
-I suggest using it when setting up the initial render takes a long time.
-
 # Interop with Backbone, jQuery, and Friends
+
+[expand this]
 
 React becomes truly spectacular once you realize that a React component is just a function that returns some HTML. That realization opens you up to fun things.
 
