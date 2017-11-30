@@ -63,7 +63,7 @@ Components behave just like custom HTML elements. You can nest them, you can pas
 
 ## Practical exercise
 
-Go into the project you created with `create-react-app` in the last section and move header stuff into a new component. Replace the body with a new `<DancingTree>` component that renders a 1028x600 `<svg>`.
+Go into the project you created with `create-react-app` in the last section and move header stuff into a new component. 
 
 # State, Props, and Unidirectional data flow
 
@@ -81,117 +81,17 @@ When you *do* need state, you should drive it through React's built-in state man
 
 You drive the change through calling `this.setState` on your class-based component.
 
-Like this 👇
-
-```jsx
-this.setState({
-	heightFactor: .8,
-	lean: .2
-})
-```
+[example]
 
 Calling `setState` updates the component's `this.state` object and triggers a re-render. Yes, you re-render on every state change. That's the beauty of React.
 
 ## Practical exercise – props
 
-Let's build  a `Pythagoras` component that renders an SVG rectangle. That's a `<rect>`, by the way. 
-
-Your `Pythagoras` component should accept a `width`, a `height`, and an `x`, `y` position and render an appropriate rectangle.
-
-...
-
-Did you get it? Now let's make it recursive.
-
-Change your `Pythagoras` component so it renders both a rectangle and two more Pythagoras components. One to the `left` and one to the `right`. Make sure you add a `maxlvl` prop and keep track so you don't render infinitely many rectangles.
-
-Don't forget to make child rectangles smaller :)
-
-I suggest copying this trig calculation
-
-```jsx
-const memoizedCalc = function () {
-    const memo = {};
-
-    const key = ({ w, heightFactor, lean }) => [w,heightFactor, lean].join('-');
-
-    return (args) => {
-        const memoKey = key(args);
-
-        if (memo[memoKey]) {
-            return memo[memoKey];
-        }else{
-            const { w, heightFactor, lean } = args;
-
-            const trigH = heightFactor*w;
-
-            const result = {
-                nextRight: Math.sqrt(trigH**2 + (w * (.5+lean))**2),
-                nextLeft: Math.sqrt(trigH**2 + (w * (.5-lean))**2),
-                A: Math.deg(Math.atan(trigH / ((.5-lean) * w))),
-                B: Math.deg(Math.atan(trigH / ((.5+lean) * w)))
-            };
-
-            memo[memoKey] = result;
-            return result;
-        }
-    }
-}();
-```
-
-And applying it to your component like this
-
-```jsx
-const Pythagoras ...
-		const { nextRight, nextLeft, A, B } = memoizedCalc({
-        w: w,
-        heightFactor: .4,
-        lean: 0
-    });
-    
-    if (left) {
-        rotate = `rotate(${-A} 0 ${w})`;
-    }else if (right) {
-        rotate = `rotate(${B} ${w} ${w})`;
-    }
-
-    return (
-        <g transform={`translate(${x} ${y}) ${rotate}`}>
-```
-
-`<g>` is a grouping element in SVG, but that's not the point of this exercise. Think of it as a `<div>` in HTML.
+[props exercise]
 
 ## Practical exercise – state
 
-You should see a fractal tree of about 2048 black nodes.
-
-![](../images/black-fractals.png)
-
-Now try changing your tree so it reads `heightFactor` and `lean` from state. Where do you think they should live?
-
-Remember, you want a single source of truth.
-
-To make it extra fun, tie that state to mouse movement. That way you can make the tree dance with your mouse.
-
-Since mouse events are tricky on SVG, I suggest using D3. It performs some transformations for you so you don't have to think about what's going on.
-
-I suggest something like this:
-
-```jsx
-import { select as d3select, mouse as d3mouse } from 'd3-selection';
-
-// ...
-d3select(this.refs.svg).on("mousemove", this.onMouseMove.bind(this));
-
-// ...
-onMouseMove(event) {
-    if (this.running) return;
-    this.running = true;
-
-    const [x, y] = d3mouse(this.refs.svg),
-}
-```
-
-Hint: use `componentDidMount` to attach that mouse listener. I'll explain what it is next.
+[state exercise]
 
 # Lifecycle hooks
 

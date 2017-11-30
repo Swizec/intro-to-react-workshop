@@ -54,9 +54,9 @@ const Welcome = () => (
         </p>
         <p>
             <big>
-                <a href="http://tiny.cc/stubhub-slack">Join the Slack Group</a>
+                <a href="http://tiny.cc/stubhub-slack">Join the Slack Group</a>{" "}
             </big>
-            it's the best place for everyone to communicate offline
+            it's the best place for everyone to chat offline
         </p>
         <p>By the end of the day you'll have built your first React app.</p>
         <p>Something like this 👇</p>
@@ -132,8 +132,8 @@ const WhoSwiz = () => (
             <li>helped over 10,000 people become better engineers</li>
             <li>
                 made this{" "}
-                <a href="https://es6cheatsheet.com">
-                    interactive ES6 cheatsheet
+                <a href="https://es2017.io">
+                    interactive ES6+ cheatsheet &mdash; es2017.io
                 </a>
             </li>
         </ul>
@@ -191,6 +191,10 @@ const CoolThings = () => (
             <ProjectLink url="http://swizec.github.io/space-invaders/">
                 Space Invaders
             </ProjectLink>
+            <ProjectLink url="https://swizec.github.io/h1b-software-salaries/">
+                Tech salary visualization
+            </ProjectLink>
+            <ProjectLink url="/">This page :)</ProjectLink>
         </ul>
 
         <p>No, these projects are not practical, but they demo well :)</p>
@@ -207,7 +211,7 @@ const IndexPage = ({ data }) => (
 
         <Start />
 
-        <p>Here's our the setlist for today 👇</p>
+        <p>Here's our setlist for today 👇</p>
 
         <ListContentPages data={data} />
 
