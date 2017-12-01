@@ -54,7 +54,9 @@ const Welcome = () => (
         </p>
         <p>
             <big>
-                <a href="http://tiny.cc/stubhub-slack">Join the Slack Group</a>{" "}
+                <a href="https://rwr-stubhub-bos.slack.com/join/shared_invite/enQtMjc4MjY3MDQwNTE0LTc5NDk1MGI5Y2VmZDY5ZjFiZWIzYWI2NzU4MDllZTVlYTVmMGUyMjNkOTIwMDBlOWUzZDM4NDg2ZGIyMWYwZWY">
+                    Join the Slack Group
+                </a>{" "}
             </big>
             it's the best place for everyone to chat offline
         </p>

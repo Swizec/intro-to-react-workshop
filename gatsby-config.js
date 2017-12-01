@@ -52,5 +52,5 @@ module.exports = {
             }
         }
     ],
-    pathPrefix: `/intro-to-react-workshop`
+    pathPrefix: `/intro-to-react-workshop/`
 };
