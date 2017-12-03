@@ -1,0 +1,2 @@
+webpackJsonp([0x8d4ee55c693c],{347:function(e,t){e.exports={pathContext:{action:"https://codepen.io/pen/define",payload:'{"editors":"0010","html":"<div id=\\"root\\"></div>","js":"const chunk = <div>\\n\\t<h1>Hello world</h1>\\n\\t<p>I\'m a paragraph</p>\\n</div>\\n","js_external":"//unpkg.com/react/umd/react.development.js","js_pre_processor":"babel","layout":"left"}'}}}});
+//# sourceMappingURL=path---redirect-to-codepen-lay-of-the-land-jsx-chunk-e7cde3bc99ccd26d3da5.js.map
