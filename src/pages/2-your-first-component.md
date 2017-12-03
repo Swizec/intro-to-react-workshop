@@ -152,7 +152,7 @@ Use real data in your `<Ticket />` component.
 
 ## Practical exercise – state
 
-Build a list of Ticket components that you can expand.
+Add a click handler to your `<Ticket />` that increases how many you're trying to get.
 
 # Lifecycle hooks
 

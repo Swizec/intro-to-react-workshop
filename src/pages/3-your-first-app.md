@@ -4,21 +4,9 @@ title: "Your First App"
 
 Now we're building an app. A simple app without *proper* state management, but an app non-the-less.
 
-It's Morty's Mindblowers 🤓
+We're going to expand our list of tickets with some more controls. Growing and shortening the visible list, filtering out tickets we don't like, that sort of thing.
 
-[![](../images/morty.gif)](http://mortysmindblowers.fun)
-
-Here's the plan:
-
-- fetch gifs from Imgur
-- keep track in top-level state
-- allow skipping with a click
-- show Rick quotes as titles
-- use error boundaries to recover from API errors
-
-If you're reading this later, you can watch me build this [from scratch on Youtube](https://www.youtube.com/watch?v=a4g81widnGM). I recorded the whole session.
-
-If you're here in person, I'm building it with you :)
+![](../images/day-1-example.gif)
 
 # What goes in which component
 
@@ -30,9 +18,9 @@ Ultimately it boils down to this 👇
 
 > If you have to use "and" to describe what your component is for, you should split it up
 
-### Practical exercise
+## Practical exercise
 
-Let's build the basic structure for our Morty's Mindblowers app. 
+Let's add a list component that renders multiple tickets. 
 
 ## Unidirectional flow – props 👇 events 👆
 
@@ -46,16 +34,11 @@ At its core the idea is that you can always know what's going on with your app. 
 
 I like to think of it as a state machine.
 
-`<insert arm waving explanation>`
+`[whiteboard explanation]`
 
 ### Practical exercise
 
-Let's 👇
-
-- talk to Imgur to get a list of gifs
-- listen for `click` events to advance
-- listen for video `ended` events to do the same
-- fetch new gifs before we run out
+Add ability to remove tickets from list.
 
 ## Generalized components
 
@@ -73,13 +56,13 @@ Another approach to building generalized components is the render callback patte
 
 The idea there is to have a component that deals with logic and instrumentation, but defers rendering to others. Some prefer explicitly calling functions, others just render the children prop.
 
-React Router does this also.
+A similar approach is using render props where you put that callback in a prop.
 
 # Routing
 
-Here's a fun true fact: I have read about React Router, but haven't used it before. In my React Native projects, I used a project that's similar but not the same. At the day job, I used a homegrown solution based on [M Westsrate's recommendation](https://hackernoon.com/how-to-decouple-state-and-ui-a-k-a-you-dont-need-componentwillmount-cc90b787aa37).
+We're going to use Routing more practically tomorrow. Here's a quick explanation.
 
-BUT! React Router is specifically designed to be simple. You declare your routes like this 👇
+React Router is designed to be declarative and follow normal React patterns. You declare your routes like this 👇
 
 ```jsx
 const routes = (
@@ -99,8 +82,6 @@ And you use `<Link>` to link between pages.
 This workshop page is built using [GatsbyJS](https://www.gatsbyjs.org/) and uses ReactRouter behind the scenes.
 
 # Interop with Backbone, jQuery, and Friends
-
-[expand this]
 
 React becomes truly spectacular once you realize that a React component is just a function that returns some HTML. That realization opens you up to fun things.
 
