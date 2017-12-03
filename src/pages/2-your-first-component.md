@@ -2,11 +2,18 @@
 title: "Your First Component"
 ---
 
-To learn about React components, we're going to build a fractal tree. One component repeated 2048 times.
+To learn about React components, we're going to build the first part of our static ticket list app – the individual ticket.
 
-![](../images/fractal-tree.gif)
+![](../images/day-1-example.gif)
 
-I'll build it with you from scratch. You can see a [working version on Github](https://swizec.github.io/react-fractals/)
+We're going to do a code-along. 👇
+
+1. Swizec explains what we're going to do
+2. Swizec codes a part of it and makes a commit
+3. You fill in the blanks
+4. Swizec shows you how to fill in the blanks 
+
+You can see the finished app [on Github](https://github.com/Swizec/react-workshop-example-day-1).
 
 # Two flavors of components
 

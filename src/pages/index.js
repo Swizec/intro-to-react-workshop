@@ -4,7 +4,7 @@ import { sortBy } from "lodash";
 import InstagramEmbed from "react-instagram-embed";
 
 import RandomOwl from "../images/random-image-005.jpg";
-import MortysMindblowers from "../images/mortysmindblowers.mp4";
+import Day1Example from "../images/day-1-example.gif";
 import Swizec from "../images/swizec.jpg";
 import StubhubApp from "../images/stubhub-app.mp4";
 
@@ -71,20 +71,11 @@ const Welcome = () => (
         <p>By the end of the day you'll have built your first React app.</p>
         <p>Something like this 👇</p>
 
-        <video
-            src={MortysMindblowers}
-            controls
-            autoPlay
-            mute="true"
-            loop
-            style={{ width: "100%" }}
-        />
+        <img src={Day1Example} />
 
         <p>
-            <a href="http://mortysmindblowers.fun">Morty's Mindblowers</a> shows
-            an endless stream of gifs from Imgur's frontpage stitched together
-            with cutscenes from a Rick & Morty episode where Morty discovers
-            deleted memories.
+            A static list of tickets pulled from StubHub's API with some
+            controls to change what you can see.
         </p>
         <p>
             By the end of the 2nd day, you'll have built something like this👇
