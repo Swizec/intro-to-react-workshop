@@ -5,16 +5,24 @@
       "path---5-build-stubhub-app-a96143e2daaa80df34d1.js.map"
     ],
     "path---2-your-first-component": [
-      "path---2-your-first-component-c57f27252f2ad722e0d1.js",
-      "path---2-your-first-component-c57f27252f2ad722e0d1.js.map"
+      "path---2-your-first-component-2637541d1f6e730a3ab4.js",
+      "path---2-your-first-component-2637541d1f6e730a3ab4.js.map"
     ],
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-12f0d2a71c7dfde271fa.js",
-      "component---src-pages-index-js-12f0d2a71c7dfde271fa.js.map"
+      "component---src-pages-index-js-cee259312e53e2ad21fd.js",
+      "component---src-pages-index-js-cee259312e53e2ad21fd.js.map"
+    ],
+    "path---redirect-to-codepen-your-first-component-state": [
+      "path---redirect-to-codepen-your-first-component-state-37c4a6579eb24a3e62af.js",
+      "path---redirect-to-codepen-your-first-component-state-37c4a6579eb24a3e62af.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
       "path----557518bd178906f8d58a.js.map"
+    ],
+    "path---redirect-to-codepen-your-first-component-functional-component": [
+      "path---redirect-to-codepen-your-first-component-functional-component-6ca9a6d29e5d1241ccd5.js",
+      "path---redirect-to-codepen-your-first-component-functional-component-6ca9a6d29e5d1241ccd5.js.map"
     ],
     "path---redirect-to-codepen-lay-of-the-land-jsx-chunk-2": [
       "path---redirect-to-codepen-lay-of-the-land-jsx-chunk-2-9d5a89fced4603fb7ea0.js",
@@ -29,8 +37,8 @@
       "component---node-modules-gatsby-remark-code-repls-default-redirect-template-js-db043875d4be25ed8bb5.js.map"
     ],
     "path---index": [
-      "path---index-2ca361874927348645d9.js",
-      "path---index-2ca361874927348645d9.js.map"
+      "path---index-b293cd2bfc6c5c64c399.js",
+      "path---index-b293cd2bfc6c5c64c399.js.map"
     ],
     "path---redirect-to-codepen-lay-of-the-land-jsx-chunk": [
       "path---redirect-to-codepen-lay-of-the-land-jsx-chunk-9205cedc7a4383f72b68.js",
@@ -52,11 +60,19 @@
       "path---404-html-a0e39f21c11f6a62c5ab.js",
       "path---404-html-a0e39f21c11f6a62c5ab.js.map"
     ],
+    "path---redirect-to-codepen-your-first-component-class-component": [
+      "path---redirect-to-codepen-your-first-component-class-component-f7d2d13fe98f7def9d14.js",
+      "path---redirect-to-codepen-your-first-component-class-component-f7d2d13fe98f7def9d14.js.map"
+    ],
     "app": [
-      "app-fd74c8c18d9bb91110d7.js",
+      "app-76a0633d09ef9792309f.js",
       "build-js-styles.css",
-      "app-fd74c8c18d9bb91110d7.js.map",
+      "app-76a0633d09ef9792309f.js.map",
       "build-js-styles.css.map"
+    ],
+    "path---redirect-to-codepen-your-first-component-children": [
+      "path---redirect-to-codepen-your-first-component-children-7705cded89bbc1d28b19.js",
+      "path---redirect-to-codepen-your-first-component-children-7705cded89bbc1d28b19.js.map"
     ],
     "path---404": [
       "path---404-a0e39f21c11f6a62c5ab.js",
@@ -71,8 +87,12 @@
       "path---4-intro-to-redux-bdb74a9aacacd960cff3.js.map"
     ],
     "path---3-your-first-app": [
-      "path---3-your-first-app-e423198bb8a5d61c7b2a.js",
-      "path---3-your-first-app-e423198bb8a5d61c7b2a.js.map"
+      "path---3-your-first-app-920636a1acae76f7b9d1.js",
+      "path---3-your-first-app-920636a1acae76f7b9d1.js.map"
+    ],
+    "path---redirect-to-codepen-your-first-component-fragments": [
+      "path---redirect-to-codepen-your-first-component-fragments-dce31edbef267ddeeddc.js",
+      "path---redirect-to-codepen-your-first-component-fragments-dce31edbef267ddeeddc.js.map"
     ],
     "component---src-templates-workshop-page-js": [
       "component---src-templates-workshop-page-js-6880c376fb7086f843e5.js",
