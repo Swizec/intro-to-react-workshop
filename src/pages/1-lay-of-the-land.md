@@ -82,6 +82,7 @@ const chunk = createElement('div', [
 ]);
 ```
 
+
 I find JSX a lot easier to read. You can look at my code and see that it's a div with a title and a paragraph.
 
 > If you can read HTML, you can read JSX.
@@ -95,6 +96,8 @@ Here's where it gets interesting. Now that we have a `chunk` of HTML, we can use
 </div>
 ```
 
+[Try in Codepen](codepen://lay-of-the-land/jsx-chunk-2)
+
 With JSX, you can put any JavaScript expression in `{}`. It evaluates and puts the result in your HTML.
 
 You can even do it in props!
@@ -107,7 +110,11 @@ You can even do it in props!
 </div>
 ```
 
-And you can define custom elements.
+[Try in Codepen](codepen://lay-of-the-land/dynamic-props)
+
+---
+
+You can define custom elements too. These are called components.
 
 ```jsx
 const Article = () => (
@@ -118,7 +125,9 @@ const Article = () => (
 );
 ```
 
-That's actually a React functional stateless component. You can use it like any other HTML element. Don't worry about the details right now, we'll talk more about components in the next section.
+The simplest component is a so-called functional stateless component – a function that takes `props` and returns JSX. 
+
+You can use React components like any other HTML element. Don't worry about the details right now, we'll talk more about components in the next section.
 
 Here's how you render a component:
 
@@ -129,7 +138,7 @@ Here's how you render a component:
 </div>
 ```
 
-HTML elements are lower case, React components must start with a capital. That's how you tell them apart.
+HTML elements are lower case, React components must start with a capital. That's how you (and React) tell them apart.
 
 As you'll see in future sections, bringing HTML into JavaScript is powerful. You get all the benefits and power of JavaScript combined with the declarative nature and readability of HTML. 👌
 
@@ -141,34 +150,7 @@ JavaScript used to be something you write in a simple text editor, open in your 
 
 Your code often runs through multiple compilers before it reaches the user. Everything from transforming ES5 into ES6 and beyond, to minifying your code and splitting it into bundles.
 
-## Start with create-react-app
-
-To avoid the pain of setting all that stuff up from scratch, we're using a toolkit: [`create-react-app`](https://github.com/facebookincubator/create-react-app). It's the officially recommended way to bootstrap a new React application.
-
-Workshop code from this point onward assumes you're running inside a `create-react-app` project.
-
-In your terminal, run:
-
-```
-$ create-react-app intro-to-react-workshop-project
-$ cd intro-to-react-workshop-project
-```
-
-![](../images/create-react-app.gif)
-
-This creates a new directory with your app, uses `npm` or `yarn` to install dependencies, and comes with a great default config.
-
-Our code goes in `src/`, which right now contains a basic App, some CSS, an SVG image, and a test file. The environment is fully set up for you to write modern JavaScript code without worrying that this or that feature is unsupported.
-
-Run the development server.
-
-```
-$ npm/yarn start
-```
-
-![](../images/welcome-to-react.gif)
-
-The two most important tools `create-react-app` set up for us are [Webpack](https://webpack.js.org/) and [Babel](https://babeljs.io/). Webpack is our bundler and Babel is our JavaScript transpiler. Let me explain.
+Two of the most important build tools are Webpack and Babel. Webpack gives us a rich ecosystem of file loaders. Babel gives us a magnificent compiler for JavaScript.
 
 ## Webpack
 
@@ -196,6 +178,59 @@ CSS turns into `<style></style>` tags, you can set up code splitting to avoid lo
 
 Webpack is great. ❤️
 
+A real world Webpack file can be a beast. Great books have been written on the nuances of a good Webpack config, let me show you what [a simple Webpack config](https://gist.github.com/elmariofredo/08ef73eb2286963a5674f66a4095ab53) might look like. Borrowed from [Mario Vejlupek](https://github.com/elmariofredo)
+
+```javascript
+const { resolve } = require('path');
+
+const webpack = require('webpack');
+
+// plugins
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+module.exports = (env) => {
+
+  return {
+    context: resolve('src'),
+    entry: {
+      app: './main.ts'
+    },
+    output: {
+      filename: '[name].[hash].js',
+      path: resolve('dist'),
+      // Include comments with information about the modules.
+      pathinfo: true,
+    },
+
+    resolve: {
+        extensions: [
+            '',
+            '.js',
+            '.ts',
+            '.tsx'
+        ]
+    },
+
+    devtool: 'cheap-module-source-map',
+
+    module: {
+      loaders: [
+        { test: /\.tsx?$/, loaders: [ 'awesome-typescript-loader' ], exclude: /node_modules/ }
+      ],
+    },
+
+    plugins: [
+
+      new HtmlWebpackPlugin({
+        template: resolve('src','index.html')
+      })
+
+    ]
+
+  }
+};
+```
+
 ## Babel
 
 ![](../images/babel.gif)
@@ -207,6 +242,39 @@ Like Webpack, it also comes in the shape of piles upon piles of plugins. Unlike 
 Personally I like to rely on a couple of preset plugins and leave it at that. In theory you can start removing Babel plugins as browsers improve and you can ship more and more modern code.
 
 The fewer transforms you use, the smaller your code can become, but the newer the browser it requires. You are not likely to go without Babel any time soon.
+
+[Play with it in your browser](http://babeljs.io/repl/#?babili=false&evaluate=true&lineWrap=false&presets=latest%2Creact%2Cstage-2&experimental=false&loose=false&spec=false&code=%5B1%2C2%2C3%5D.map(n%20%3D%3E%20n%20%2B%201)%3B&playground=true)
+
+## A quick way to get started – create-react-app
+
+While setting up a simple Webpack+Babel configuration is easy, it's fiddly and doesn't come with some bells and whistles that make workshoppin' easier. Plus it's something you're not likely to play with very often.
+
+That's why we're using a toolkit: [`create-react-app`](https://github.com/facebookincubator/create-react-app). It's the officially recommended way to bootstrap a new React application.
+
+Workshop code from this point onward assumes you're running inside a `create-react-app` project.
+
+In your terminal, run:
+
+```
+$ create-react-app intro-to-react-workshop-project
+$ cd intro-to-react-workshop-project
+```
+
+![](../images/create-react-app.gif)
+
+This creates a new directory with your app, uses `npm` or `yarn` to install dependencies, and comes with a great default config.
+
+Our code goes in `src/`, which right now contains a basic App, some CSS, an SVG image, and a test file. The environment is fully set up for you to write modern JavaScript code without worrying that this or that feature is unsupported.
+
+Run the development server.
+
+```
+$ npm/yarn start
+```
+
+![](../images/welcome-to-react.gif)
+
+The two most important tools `create-react-app` set up for us are [Webpack](https://webpack.js.org/) and [Babel](https://babeljs.io/). Webpack is our bundler and Babel is our JavaScript transpiler. Let me explain.
 
 # React ecosystem
 
@@ -233,9 +301,9 @@ Some common pieces that people use are 👇
 3. A styling approach
 4. Some way to talk to APIs (often GraphQL or fetch calls)
 
-Those 4 choices in some ways dictate the rest of the libraries you're going to use. Redux likes one way of handling forms, MobX another, for example. The styling library you choose, defines which helper libraries you can use, different data layers have different tooling etc.
+Those 4 choices in some ways dictate the rest of the libraries you're going to use. Redux likes one way of handling forms, MobX another. The styling library you choose, defines which helper libraries you can use, different data layers have different tooling etc.
 
-We'll talk more about styling when we build our first component, routing when we build our first app, and state management next week.
+We'll talk more about styling when we build our first component,  routing and state management come tomorrow. We're going to use `fetch()` calls to talk to APIs.
 
 ## Debugging/Testing
 

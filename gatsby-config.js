@@ -40,7 +40,8 @@ module.exports = {
                         resolve: `gatsby-remark-code-repls`,
                         options: {
                             externals: [
-                                "//unpkg.com/react/umd/react.development.js"
+                                "https://cdnjs.cloudflare.com/ajax/libs/react/16.2.0/umd/react.production.min.js",
+                                "https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.2.0/umd/react-dom.production.min.js"
                             ],
                             codesandbox: ["react", "react-dom"],
                             html: '<div id="root"></div>',
@@ -55,5 +56,5 @@ module.exports = {
         `gatsby-plugin-twitter`,
         `gatsby-plugin-nprogress`
     ],
-    pathPrefix: `intro-to-react-workshop/`
+    pathPrefix: `/intro-to-react-workshop/`
 };
