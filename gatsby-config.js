@@ -29,28 +29,31 @@ module.exports = {
                             classPrefix: `language-`
                         }
                     },
+                    `gatsby-remark-copy-linked-files`,
                     {
                         resolve: `gatsby-remark-images`,
                         options: {
-                            maxWidth: 960,
-                            linkImagesToOriginal: true
+                            maxWidth: 590
                         }
                     },
-                    `gatsby-remark-copy-linked-files`,
+                    {
+                        resolve: `gatsby-remark-code-repls`,
+                        options: {
+                            externals: [
+                                "//unpkg.com/react/umd/react.development.js"
+                            ],
+                            codesandbox: ["react", "react-dom"],
+                            html: '<div id="root"></div>',
+                            directory: `${__dirname}/examples/`,
+                            target: "_blank"
+                        }
+                    },
                     `gatsby-remark-autolink-headers`
                 ]
             }
         },
         `gatsby-plugin-twitter`,
-        `gatsby-plugin-nprogress`,
-        {
-            resolve: `gatsby-remark-code-repls`,
-            options: {
-                externals: ["//unpkg.com/react/umd/react.development.js"],
-                html: '<div id="root"></div>',
-                directory: `${__dirname}/examples/`
-            }
-        }
+        `gatsby-plugin-nprogress`
     ],
-    pathPrefix: `/intro-to-react-workshop/`
+    pathPrefix: `intro-to-react-workshop/`
 };

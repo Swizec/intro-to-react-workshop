@@ -6,7 +6,7 @@ We're building the StubHub app we talked about earlier. List events, show them, 
 
 This page serves as an outline of how we're going to approach it. You can think of it as a more structured version of the commit history on my [example app repository](https://github.com/Swizec/redux-workshop-example-app).
 
-As we go along, I'm going to put code in [this repository](https://github.com/Swizec/redux-workshop-code). Each step is going to have its own set of commits.
+As we go along, I'm going to put code in [this repository](https://github.com/Swizec/stubhub-workshop-code-boston-day-2). Each step is going to have its own set of commits.
 
 Here's the general plan 👇
 
@@ -19,10 +19,10 @@ We'll use the original example repo as guidance so we don't spend too much time 
 
 # Clone the starter repo 
 
-Your journey begins with [the starter repo](https://github.com/Swizec/redux-workshop-starter-repo).
+Your journey begins with [the starter repo](https://github.com/Swizec/stubhub-workshop-code-boston-day-2).
 
 ```
-$ git clone https://github.com/Swizec/redux-workshop-starter-repo.git
+$ git clone https://github.com/Swizec/stubhub-workshop-code-boston-day-2
 $ cd redux-workshop-starter-repo
 $ npm install
 ```
@@ -40,7 +40,7 @@ This gives you a project set up with `create-react-app` with everything you need
 
 In theory you should be able to focus just on React and Redux fundamentals and not have to worry about any boilerplate. You might have to comment out some imports until we implement them.
 
-The following is an outline. If you're reading this post-facto, you can look at the [Day-of code repository](https://github.com/Swizec/redux-workshop-code)'s commit history. It should closely reflect this outline.
+The following is an outline. If you're reading this post-facto, you can look at the [Day-of code repository](https://github.com/Swizec/stubhub-workshop-code-boston-day-2)'s commit history. It should closely reflect this outline.
 
 # List events from StubHub
 

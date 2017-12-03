@@ -71,6 +71,8 @@ const chunk = <div>
 </div>
 ```
 
+[Try in Codepen](codepen://lay-of-the-land/jsx-chunk)
+
 Behind the scenes JSX compiles into a series of `createElement` function calls. Our `chunk` turns into something like this:
 
 ```jsx
