@@ -1,12 +1,12 @@
 {
   "assetsByChunkName": {
     "path---5-build-stubhub-app": [
-      "path---5-build-stubhub-app-a96143e2daaa80df34d1.js",
-      "path---5-build-stubhub-app-a96143e2daaa80df34d1.js.map"
+      "path---5-build-stubhub-app-fd577a2763988c8b8a27.js",
+      "path---5-build-stubhub-app-fd577a2763988c8b8a27.js.map"
     ],
     "path---2-your-first-component": [
-      "path---2-your-first-component-6745a04e2e9ebd5874ac.js",
-      "path---2-your-first-component-6745a04e2e9ebd5874ac.js.map"
+      "path---2-your-first-component-6c81e03ea84f70a177b5.js",
+      "path---2-your-first-component-6c81e03ea84f70a177b5.js.map"
     ],
     "component---src-pages-index-js": [
       "component---src-pages-index-js-12f0d2a71c7dfde271fa.js",
@@ -25,8 +25,8 @@
       "component---node-modules-gatsby-remark-code-repls-default-redirect-template-js-db043875d4be25ed8bb5.js.map"
     ],
     "path---index": [
-      "path---index-b16f754ac0c4949e093f.js",
-      "path---index-b16f754ac0c4949e093f.js.map"
+      "path---index-ef2e07d37d92ccbd8ec6.js",
+      "path---index-ef2e07d37d92ccbd8ec6.js.map"
     ],
     "path---redirect-to-codepen-lay-of-the-land-jsx-chunk": [
       "path---redirect-to-codepen-lay-of-the-land-jsx-chunk-e7cde3bc99ccd26d3da5.js",
@@ -45,9 +45,9 @@
       "path---404-html-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-a38e2d4ce54d3bef4a29.js",
+      "app-947f09809487f906bad1.js",
       "build-js-styles.css",
-      "app-a38e2d4ce54d3bef4a29.js.map",
+      "app-947f09809487f906bad1.js.map",
       "build-js-styles.css.map"
     ],
     "path---404": [
@@ -55,16 +55,16 @@
       "path---404-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---1-lay-of-the-land": [
-      "path---1-lay-of-the-land-5e3d2f253413a8289fb4.js",
-      "path---1-lay-of-the-land-5e3d2f253413a8289fb4.js.map"
+      "path---1-lay-of-the-land-a79fb061791b7076546d.js",
+      "path---1-lay-of-the-land-a79fb061791b7076546d.js.map"
     ],
     "path---4-intro-to-redux": [
-      "path---4-intro-to-redux-92171c8a5f3f3c6cf767.js",
-      "path---4-intro-to-redux-92171c8a5f3f3c6cf767.js.map"
+      "path---4-intro-to-redux-d4a4c445d0df5561ef62.js",
+      "path---4-intro-to-redux-d4a4c445d0df5561ef62.js.map"
     ],
     "path---3-your-first-app": [
-      "path---3-your-first-app-39f16c693226cada79d1.js",
-      "path---3-your-first-app-39f16c693226cada79d1.js.map"
+      "path---3-your-first-app-dc0a3bd9d23118e4b76e.js",
+      "path---3-your-first-app-dc0a3bd9d23118e4b76e.js.map"
     ],
     "component---src-templates-workshop-page-js": [
       "component---src-templates-workshop-page-js-d08c6879aa37b4640d8b.js",
