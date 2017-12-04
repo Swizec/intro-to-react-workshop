@@ -40,7 +40,13 @@ const ListContentPages = ({ data }) => {
 const Welcome = () => (
     <div>
         <h1>Hello new friend 👋</h1>
-
+        <p>
+            <big>
+                This workshop has moved to{" "}
+                <a href="https://reactworkshop.co">reactworkshop.co</a>
+            </big>{" "}
+            please go there
+        </p>
         <p>
             Welcome to Swizec's Intro to React & Redux Workshop. Today you will
             build your first webapp with React and Friends. {`<Tomorrow>`} you
