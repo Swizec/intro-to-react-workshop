@@ -56,5 +56,5 @@ module.exports = {
         `gatsby-plugin-twitter`,
         `gatsby-plugin-nprogress`
     ],
-    pathPrefix: `/intro-to-react-workshop/`
+    pathPrefix: `intro-to-react-workshop/`
 };
